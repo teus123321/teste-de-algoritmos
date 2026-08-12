@@ -1,0 +1,36 @@
+.titulos {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.titulos h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.titulos p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #fafafa;
+    font-family: var(--font-code); /* Deixa com cara de editor de código */
+    font-size: 0.9rem;
+    color: var(--text-main);
+    resize: vertical;
+    transition: all 0.2s ease;
+    line-height: 1.5;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15); /* Anel de foco acessível e moderno */
+}

@@ -1,0 +1,44 @@
+/*  VARIÁVEIS DE CORES E FONTES*/
+:root {
+    --bg-color: #f4f4f5; /* Cinza bem claro para o fundo */
+    --card-bg: #ffffff;  /* Fundo branco para o container principal */
+    --text-main: #18181b;
+    --text-muted: #71717a;
+    --primary-color: #3b82f6; /* Azul moderno */
+    --primary-hover: #2563eb;
+    --secondary-color: #e4e4e7;
+    --secondary-hover: #d4d4d8;
+    --border-color: #e4e4e7;
+    
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-code: 'Fira Code', monospace; /* Fonte com estilo de programação */
+}
+
+/*  RESET DE ESTILOS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-sans);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+.container {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 800px; /* Largura agradável para ler código */
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Sombra suave para destacar do fundo */
+    margin-bottom: 2rem;
+}
