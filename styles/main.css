@@ -1,20 +1,23 @@
-/*  VARIÁVEIS DE CORES E FONTES*/
 :root {
-    --bg-color: #f4f4f5; /* Cinza bem claro para o fundo */
-    --card-bg: #ffffff;  /* Fundo branco para o container principal */
+    --bg-color: #0a0a0f;      /* preto azulado, não preto puro */
+    --card-bg: #ffffff;
     --text-main: #18181b;
     --text-muted: #71717a;
-    --primary-color: #3b82f6; /* Azul moderno */
+    --primary-color: #3b82f6;
     --primary-hover: #2563eb;
     --secondary-color: #e4e4e7;
     --secondary-hover: #d4d4d8;
     --border-color: #e4e4e7;
-    
+
+    --bg-accent-1: #3b82f6; /* azul */
+    --bg-accent-2: #8b5cf6; /* violeta */
+    --bg-accent-3: #06b6d4; /* ciano */
+    --grid-line: rgba(255, 255, 255, 0.06);
+
     --font-sans: 'Inter', system-ui, sans-serif;
-    --font-code: 'Fira Code', monospace; /* Fonte com estilo de programação */
+    --font-code: 'Fira Code', monospace;
 }
 
-/*  RESET DE ESTILOS */
 * {
     margin: 0;
     padding: 0;
@@ -31,14 +34,54 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding: 2rem 1rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* grade de pontos, agora visível contra o fundo escuro */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(var(--grid-line) 1px, transparent 1px);
+    background-size: 28px 28px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* glows neon animados */
+body::after {
+    content: "";
+    position: fixed;
+    inset: -20%;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(38% 32% at 15% 20%, rgba(59, 130, 246, 0.35), transparent 70%),
+        radial-gradient(32% 28% at 85% 15%, rgba(139, 92, 246, 0.30), transparent 70%),
+        radial-gradient(42% 38% at 50% 90%, rgba(6, 182, 212, 0.28), transparent 70%);
+    filter: blur(70px);
+    animation: drift 18s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(3%, -2%) scale(1.1); }
+    100% { transform: translate(-3%, 2%) scale(1); }
 }
 
 .container {
+    position: relative;
+    z-index: 1;
     background-color: var(--card-bg);
     width: 100%;
-    max-width: 800px; /* Largura agradável para ler código */
+    max-width: 800px;
     padding: 2.5rem;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Sombra suave para destacar do fundo */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); /* sombra mais forte pro contraste com o fundo escuro */
     margin-bottom: 2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::after { animation: none; }
 }
