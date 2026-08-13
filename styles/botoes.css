@@ -2,6 +2,7 @@
     display: flex;
     gap: 1rem;
     justify-content: flex-end; /* Alinha os botões à direita */
+    position: relative;
 }
 
 button {
@@ -25,10 +26,24 @@ button:active {
 }
 
 .btn-secondary {
-    background-color: var(--secondary-color);
-    color: var(--text-main);
+    background-color: #3b82f6; /* Azul para escolher/opções */
+    color: white;
 }
 
+.btn-primary:hover {
+    background-color: var(--secondary-hover);
+}
+
+
 .btn-secondary:hover {
+    background-color: var(--secondary-hover);
+}
+
+.btn-tertiary {
+    background-color: #3b82f6; /* Azul para escolher/opções */
+    color: white;
+}
+
+.btn-tertiary:hover {
     background-color: var(--secondary-hover);
 }
