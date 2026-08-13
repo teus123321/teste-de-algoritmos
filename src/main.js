@@ -1,6 +1,6 @@
 const textOne = document.getElementById('algoritmo1');
-// Cria um objeto com os dados do input
 
+// Cria um objeto com os dados do input
 export function getDadosAlgoritmo1() {
     return {
         dados : textOne.value,
