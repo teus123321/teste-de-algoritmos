@@ -1,3 +1,5 @@
+
+// botão escolher linguagem
 document.addEventListener('DOMContentLoaded', () => {
     const btnEscolher = document.getElementById('escolher');
     const lista = document.querySelector('.lista');
