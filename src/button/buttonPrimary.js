@@ -1,4 +1,4 @@
-import { getDadosAlgoritmo1, getDadosAlgoritmo2 } from '../inputs/inputText';
+import { getDadosAlgoritmo1, getDadosAlgoritmo2 } from '../inputs/inputText.js';
 
 const btn = document.getElementById('executar');
 
