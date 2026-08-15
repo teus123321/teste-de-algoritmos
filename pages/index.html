@@ -7,35 +7,43 @@
     <title>Teste de Algoritmos</title>
     <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWufZ1i4-t88eJh1RpKBT86sAx4NTlBRZsLYysBW7vbg&s=10"
         rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/textos.css">
-    <link rel="stylesheet" href="styles/formulario.css">
-    <link rel="stylesheet" href="styles/botoes.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/lista.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/textos.css">
+    <link rel="stylesheet" href="../styles/formulario.css">
+    <link rel="stylesheet" href="../styles/botoes.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/lista.css">
 </head>
 
 <body>
+
+    <!-- container principal -->
     <div class="container">
         <div class="titulos">
             <h1>Bem vindo ao teste de algoritmos</h1>
             <p>Esse site é destinado a testar diferentes algoritmos</p>
         </div>
+        <!-- input de algoritmo -->
         <div class="formulario">
             <div class="input-group">
                 <label for="algoritmo1" id="label-algoritmo">Escolha um algoritmo:</label>
                 <textarea id="algoritmo1" name="algoritmo1" rows="4" cols="50"></textarea>
             </div>
 
+            <!-- segundo input de algoritmo -->
             <div class="input-group">
                 <label for="algoritmo2" id="label-algoritmo2">escolha um algoritmo:</label>
                 <textarea id="algoritmo2" name="algoritmo2" rows="4" cols="50"></textarea>
             </div>
         </div>
+
+        <!-- botões de executar e limpar -->
         <div class="botoes">
             <button id="executar" class="btn-primary">Executar</button>
             <button id="limpar" class="btn-secondary">Limpar</button>
         </div>
+
+        <!-- dropdown de linguagens -->
         <div class="dropdown-container" style="position: relative; display: inline-block;">
             <button id="escolher" class="btn-tertiary">Escolher</button>
             <div class="lista">
@@ -47,18 +55,29 @@
                 </ul>
             </div>
         </div>
+
+        <!-- exibir resultados -->
+        <div class="card-escondido" id="card-escondido">
+            <div class="card-result">
+                <h2>Resultado dos algoritmos escolhidos :</h2>
+                <p id="resultado-algoritmo1"></p>
+            </div>
+        </div>
     </div>
     <footer>
+
+        <!-- mostrar o desenvolvedor -->
         <hr>
         <p>Desenvolvido por: <a href="https://github.com/teus123321?tab=overview&from=2026-08-01&to=2026-08-12"
                 target="_blank">Mateus Henrique</a></p>
     </footer>
 
-    <script src="src/main.js"></script>
-    <script type="module" src="src/button/buttonPrimary.js"></script>
-    <script type="module" src="src/button/buttonSecondary.js"></script>
-    <script type="module" src="src/button/buttonEscolher.js"></script>
-    <script type="module" src="src/inputs/inputText.js"></script>
+    <!-- Importando os scripts JavaScript -->
+    <script src="../src/main.js"></script>
+    <script type="module" src="../src/button/buttonPrimary.js"></script>
+    <script type="module" src="../src/button/buttonSecondary.js"></script>
+    <script type="module" src="../src/button/buttonEscolher.js"></script>
+    <script type="module" src="../src/inputs/inputText.js"></script>
 
 </body>
 
