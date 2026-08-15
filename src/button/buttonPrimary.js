@@ -1,14 +1,15 @@
-import { getDadosAlgoritmo1 } from '../main.js';
+import { getDadosAlgoritmo1, getDadosAlgoritmo2 } from '../inputs/inputText';
 
 const btn = document.getElementById('executar');
 
 //logica botao primario
 btn.addEventListener('click', () => {
-    // alert(`O valor do input é: ${textOne.value}`);
-    const dados = getDadosAlgoritmo1();
-    if (dados.dados.trim() !== '') {
-        alert(`O valor do input é: ${dados.dados}`);
-    }else {
+
+    const dadosOne = getDadosAlgoritmo1();
+    const dadosTwo = getDadosAlgoritmo2();
+    if (dadosOne.dados.trim() !== '' && dadosTwo.dados.trim() !== '') {
+        alert(`Os valores dos inputs é: ${dadosOne.dados} / ${dadosTwo.dados}`);
+    } else {
         alert('Por favor, insira um valor no input antes de enviar.');
     }
 });
